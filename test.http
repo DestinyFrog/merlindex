@@ -1,0 +1,34 @@
+
+@base = http://localhost:3000
+@jwt = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJlbWFpbCI6InRhcnRhcnVnYUBlbWFpbC5jb20iLCJleHAiOjE3NzQzMTIyNzgsImlhdCI6MTc3NDIyNTg3OH0.GTNv1Akxxlo8Rf0mfRGcD49ZvVCGqb3ENh2F-DepEis
+
+### Create User
+POST {{base}}/user
+Content-Type: application/json
+
+{
+  "name": "Tartaruga",
+  "email": "tartaruga@email.com",
+  "password": "Senha"
+}
+
+### Login User
+POST {{base}}/login
+Content-Type: application/json
+
+{
+  "email": "tartaruga@email.com",
+  "password": "Senha"
+}
+
+### Search for Lists
+GET {{base}}/list?search=macaco
+
+### Create List
+POST {{base}}/list
+Cookie: token={{jwt}}
+Content-Type: application/json
+
+{
+  "title": "test"
+}

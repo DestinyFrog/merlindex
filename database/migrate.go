@@ -1,10 +1,18 @@
 package database
 
+import "os"
+
 func Migrate() error {
 	conn, err := Db()
 	if err != nil {
 		return err
 	}
 
-	return conn.AutoMigrate()
+	sql, err := os.ReadFile("database/up.sql")
+	if err != nil {
+		return err
+	}
+
+	_, err = conn.Exec(string(sql))
+	return err
 }

@@ -11,6 +11,7 @@ var (
 	LocalDatabaseName string
 	DatabaseUrl       string
 	DatabaseAuthToken string
+	JwtSecret         string
 )
 
 func init() {
@@ -20,7 +21,6 @@ func init() {
 	viper.AutomaticEnv()
 
 	viper.SetDefault("PORT", 3040)
-	viper.SetDefault("DATABASE_FILE", "purple.db")
 
 	if err := viper.ReadInConfig(); err != nil {
 		if _, ok := err.(viper.ConfigFileNotFoundError); !ok {
@@ -29,4 +29,8 @@ func init() {
 	}
 
 	Port = viper.GetInt("PORT")
+	LocalDatabaseName = viper.GetString("LOCAL_DATABASE_NAME")
+	DatabaseUrl = viper.GetString("DATABASE_URL")
+	DatabaseAuthToken = viper.GetString("DATABASE_AUTH_TOKEN")
+	JwtSecret = viper.GetString("JWT_SECRET")
 }

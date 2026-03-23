@@ -1,0 +1,33 @@
+2026/03/21 22:18:10 error: failed to execute query INSERT INTO list (title,user_id) VALUES (?,?) RETURNING "id"
+error code = 1: Error executing statement: Remote SQlite failure: `3:787:FOREIGN KEY constraint failed`
+2026/03/21 22:19:23 error: sql: Scan error on column index 0, name "id": converting NULL to int is unsupported
+2026/03/21 22:19:48 error: sql: Scan error on column index 0, name "id": converting NULL to int is unsupported
+2026/03/21 22:20:22 error: sql: Scan error on column index 0, name "id": converting NULL to int is unsupported
+2026/03/21 22:21:15 error: sql: Scan error on column index 0, name "id": converting NULL to int is unsupported
+2026/03/21 22:36:02 error: sql: no rows in result set
+2026/03/21 22:47:45 error: sql: Scan error on column index 0, name "id": converting NULL to int is unsupported
+2026/03/21 23:21:50 error: sql: Scan error on column index 0, name "id": converting NULL to int is unsupported
+2026/03/21 23:27:39 error: sql: Scan error on column index 0, name "id": converting NULL to int is unsupported
+2026/03/21 23:27:42 error: sql: Scan error on column index 0, name "id": converting NULL to int is unsupported
+2026/03/21 23:27:44 error: sql: Scan error on column index 0, name "id": converting NULL to int is unsupported
+2026/03/21 23:28:18 sql: INSERT INTO "list" ("title", "user_id") VALUES ('test', 1) RETURNING "id"
+2026/03/21 23:28:18 error: sql: Scan error on column index 0, name "id": converting NULL to int is unsupported
+2026/03/21 23:30:30 sql: INSERT INTO "list" ("title", "user_id") VALUES ('test', 1) RETURNING "id"
+2026/03/22 00:33:29 error: code=400, message=Bad Request, err=json: Unmarshal(non-pointer struct { Email string "json:\"email\""; Password string "json:\"password\"" })
+2026/03/22 00:34:11 error: code=400, message=Bad Request, err=json: Unmarshal(non-pointer struct { Email string "json:\"email\""; Password string "json:\"password\"" })
+2026/03/22 00:36:42 error: code=400, message=Bad Request, err=json: Unmarshal(non-pointer struct { Email string "json:\"email\""; Password string "json:\"password\"" })
+2026/03/22 00:37:28 error: code=400, message=Bad Request, err=json: Unmarshal(non-pointer struct { Email string "json:\"email\""; Password string "json:\"password\"" })
+2026/03/22 00:37:30 error: code=400, message=Bad Request, err=json: Unmarshal(non-pointer struct { Email string "json:\"email\""; Password string "json:\"password\"" })
+2026/03/22 00:37:33 error: code=400, message=Bad Request, err=json: Unmarshal(non-pointer struct { Email string "json:\"email\""; Password string "json:\"password\"" })
+2026/03/22 00:46:41 error: scanning all: parsing slice destination: scany: destination must be a slice, got: database.User
+2026/03/22 00:46:43 error: scanning all: parsing slice destination: scany: destination must be a slice, got: database.User
+2026/03/22 01:00:43 error: scany: expected 1 row, got: 3
+2026/03/22 01:01:17 error: key is of invalid type: HMAC sign expects []byte
+2026/03/22 01:26:22 error: none user logged
+2026/03/22 01:29:47 error: none user logged
+2026/03/22 01:29:49 error: none user logged
+2026/03/22 01:31:40 error: none user logged
+2026/03/22 01:32:07 error: none user logged
+2026/03/22 21:16:08 error: none user logged
+2026/03/22 21:30:36 error: none user logged
+2026/03/22 21:31:32 error: none user logged
