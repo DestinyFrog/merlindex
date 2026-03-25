@@ -39,3 +39,9 @@ CREATE TABLE IF NOT EXISTS `comment_list_item` (
     FOREIGN KEY(`comment_id`) REFERENCES `comment`(`id`),
     FOREIGN KEY(`list_item_id`) REFERENCES `list_item`(`id`)
 );
+
+-- INSERT INTO `list` (id, title)
+-- VALUES
+-- (1, 'Animes'),
+-- (2, 'Livros'),
+-- (3, 'Personagens de Samurai Champloo');

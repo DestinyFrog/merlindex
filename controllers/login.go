@@ -1,6 +1,7 @@
 package controllers
 
 import (
+	"database/sql"
 	"log"
 	"merlindex/example/config"
 	"merlindex/example/database"
@@ -48,6 +49,10 @@ func (c *Login) Execute(ctx *echo.Context) error {
 	var user database.User
 	rows, err := db.QueryContext(ctx.Request().Context(), query)
 	if err != nil {
+		if err == sql.ErrNoRows {
+			log.Printf("error: %v", err)
+			return utils.UserNotFound.Handle(ctx)
+		}
 		log.Printf("error: %v", err)
 		return utils.ErrorInternal.Handle(ctx)
 	}

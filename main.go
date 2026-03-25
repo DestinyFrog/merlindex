@@ -29,7 +29,7 @@ func main() {
 
 	e.Use(middlewares.OptionalJWT)
 
-	e.Static("/", "/public")
+	e.Static("/", "build")
 	e.POST("/user", controllers.NewCreateUser().Execute)
 	e.POST("/login", controllers.NewLogin().Execute)
 	e.POST("/logout", controllers.NewLogin().Execute)

@@ -1,0 +1,11 @@
+package templates
+
+templ Login(content templ.Component) {
+    <main>
+        <form hx-post="/login">
+            <input type="email" name="email" />
+            <input type="password" name="password" />
+            <button>Login</button>
+        </form>
+    </main>
+}

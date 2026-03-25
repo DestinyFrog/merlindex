@@ -1,0 +1,13 @@
+package templates
+
+import "merlindex/example/models"
+
+templ Lists(lists []models.List) {
+    <main>
+        <form hx-post="/login">
+            <input type="email" name="email" />
+            <input type="password" name="password" />
+            <button>Login</button>
+        </form>
+    </main>
+}
